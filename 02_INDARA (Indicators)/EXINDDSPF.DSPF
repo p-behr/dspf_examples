@@ -1,0 +1,20 @@
+     A*----------------------------------------------------------------
+     A* AN EXAMPLE DISPLAY FILE
+     A*----------------------------------------------------------------
+     A                                      DSPSIZ(*DS3)
+     A                                      CA03
+     A                                      INDARA
+     A*===============================================================
+     A* Just a screen
+     A*===============================================================
+     A          R R01
+     A                                  2  3'Type a color; "RED", "WHITE", or "-
+     A                                      BLUE"'
+     A                                      COLOR(BLU)
+     A                                  4  3'Message:'
+     A            R1MSG         50A  B  4 12DSPATR(UL)
+     A  01                                  COLOR(RED)
+     A  02                                  COLOR(WHT)
+     A  03                                  COLOR(BLU)
+     A                                 22  3'F3=Exit'
+     A                                      COLOR(BLU)
