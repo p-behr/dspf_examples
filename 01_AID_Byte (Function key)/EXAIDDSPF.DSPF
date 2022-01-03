@@ -1,0 +1,17 @@
+     A*----------------------------------------------------------------
+     A* AN EXAMPLE DISPLAY FILE
+     A*----------------------------------------------------------------
+     A                                      DSPSIZ(*DS3)
+     A                                      CA01 CA02 CA03 CA04 CA05 CA06 CA07
+     A                                      CA08 CA09 CA10 CA11 CA12 CA13 CA14
+     A                                      CA15 CA16 CA17 CA18 CA19 CA20 CA21
+     A                                      CA22 CA23 CA24
+     A*===============================================================
+     A* Just a screen
+     A*===============================================================
+     A          R R01
+     A                                  2  3'Press a function key, or type "EXI-
+     A                                      T" to quit:'
+     A                                      COLOR(BLU)
+     A                                  4  3'Message:'
+     A            R1MSG         50A  B  4 12DSPATR(UL)
