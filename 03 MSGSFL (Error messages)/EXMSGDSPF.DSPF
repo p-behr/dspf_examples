@@ -1,0 +1,35 @@
+     A*----------------------------------------------------------------
+     A* AN EXAMPLE DISPLAY FILE
+     A*----------------------------------------------------------------
+     A                                      DSPSIZ(*DS3)
+     A                                      CA03
+     A                                      INDARA
+     A*===============================================================
+     A* Just a screen
+     A*===============================================================
+     A          R R01
+     A                                      OVERLAY
+     A                                  2  3'Type a message:'
+     A                                      COLOR(BLU)
+     A                                  4  3'Message:'
+     A            R1MSG         50A  B  4 12DSPATR(UL)
+     A  50                                  DSPATR(PC RI)
+     A                                 22  2'F3=Exit'
+     A                                      COLOR(BLU)
+      *===============================================================
+      * MESSAGE SUBFILE
+      *===============================================================
+     A          R MSGSFL                    SFL
+     A                                      SFLMSGRCD(23)
+     A            MSGKEY                    SFLMSGKEY
+     A            PS_PGMNAM                 SFLPGMQ
+      *----------------------------------------------------------------
+     A          R MSGSFLC                   SFLCTL(MSGSFL)
+     A                                      SFLSIZ(0002)
+     A                                      SFLPAG(0001)
+     A                                      OVERLAY
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A                                      SFLINZ
+     A N98                                  SFLEND
+     A            PS_PGMNAM                 SFLPGMQ
