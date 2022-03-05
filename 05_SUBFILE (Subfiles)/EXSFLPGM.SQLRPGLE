@@ -16,7 +16,7 @@ dcl-ds  dspf_inds;
     S1_End      ind  pos(3);
 end-ds;
 
-dcl-s rrn1      int(10);
+dcl-s rrn1      uns(5);
 
 /include EXFKEY
 
