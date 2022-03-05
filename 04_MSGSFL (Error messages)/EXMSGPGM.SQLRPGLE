@@ -1,6 +1,6 @@
 **free
 
-ctl-opt  option(*srcstmt: *nodebugio) dftactgrp(*no) actgrp('PBTEST');
+ctl-opt  option(*srcstmt: *nodebugio) dftactgrp(*no) actgrp('EXAMPLES');
 
 dcl-f  EXMSGDSPF   workstn
                    infds(dspf_info)  indds(dspf_inds);
@@ -14,8 +14,8 @@ dcl-ds  dspf_inds;
        R1Msg_ERR       ind    pos(50);
 end-ds;
 
-/include *LIBL/EXAMPLES,EXFKEY
-/include *LIBL/EXAMPLES,EXPSDS
+/include EXFKEY
+/include EXPSDS
 
 
 SendProgramMessage('Program started...');
@@ -71,5 +71,5 @@ return;
 
 
  // Copy the SendProgramMessage & ClearProgramMessages procedures
- /include *LIBL/EXAMPLES,EXMSGCPY
+ /include EXMSGCPY
 

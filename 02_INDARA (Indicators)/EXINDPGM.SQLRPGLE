@@ -18,7 +18,7 @@ dcl-ds  dspf_inds;
     blue      ind  pos(3);
 end-ds;
 
-/include *LIBL/EXAMPLES,EXFKEY
+/include EXFKEY
 
 
 dou keyPressed = F3;

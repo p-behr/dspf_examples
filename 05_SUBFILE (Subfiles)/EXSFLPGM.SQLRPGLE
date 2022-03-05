@@ -3,7 +3,6 @@
 ctl-opt  option(*srcstmt: *nodebugio) dftactgrp(*no) actgrp('EXAMPLES');
 
 dcl-f  EXSFLDSPF   workstn
-                   extdesc('PBEHR/EXSFLDSPF') extfile(*extdesc)
                    infds(dspf_info)  indds(dspf_inds)
                    sfile( sfl1 : rrn1 );
 
@@ -19,7 +18,7 @@ end-ds;
 
 dcl-s rrn1      int(10);
 
-/include PBEHR/EXAMPLES,EXFKEY
+/include EXFKEY
 
 LoadSubfile();
 dou keyPressed = F3;

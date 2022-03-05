@@ -4,7 +4,7 @@ Many display file programs use a simple output field for displaying messages to 
 
 A message subfile is a more sophisticated method of sending messages to the user.  It is more complicated than a simple output field, but it's not very difficult and allows your program to send multiple messages at the same time.  The user will only see 1 message line at a time, and you put the cursor on the message subfile and page-down/page-down to scroll through all the messages. 
 
-While the message subfile is more complicate, once you have everything in place sending messages to the user is no harder than setting an error variable!
+While the message subfile is more complicated, once you have everything in place sending messages to the user is no harder than setting an error variable!
 
 
 ### Using message subfile
@@ -42,7 +42,7 @@ While the message subfile is more complicate, once you have everything in place 
     
 * In your RPG program, include the PSDS (this is where we get the program name "PS_PGMNAM"). 
     ```
-    /include *LIBL/EXAMPLES,EXPSDS
+    /include EXPSDS
     ```
     * The program name, and many other things, are available in the PSDS
         ```
@@ -56,7 +56,7 @@ While the message subfile is more complicate, once you have everything in place 
 * In your RPG program, include the procedures to send and remove program messages 
     ```
         // Copy the SendProgramMessage & ClearProgramMessages procedures
-        /include *LIBL/EXAMPLES,EXMSGCPY
+        /include EXMSGCPY
     ```
   
 * To send a message to the user, you call the SendProgramMessage() procedure
