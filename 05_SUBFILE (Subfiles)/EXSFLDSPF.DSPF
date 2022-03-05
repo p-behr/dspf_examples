@@ -1,0 +1,52 @@
+     A*----------------------------------------------------------------
+     A* AN EXAMPLE DISPLAY FILE
+     A*----------------------------------------------------------------
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03
+     A                                      PRINT
+     A                                      INDARA
+     A*===============================================================
+     A* A SUBFILE
+     A*===============================================================
+     A          R SFL1                      SFL
+     A  05                                  SFLNXTCHG
+     A            S1_ROWKEY     10A  O  5  4
+     A            S1_DATFLD       L  O  5 16DATFMT(*ISO)
+     A            S1_NBRFLD     12Y 3O  5 28EDTCDE(N)
+     A            S1_TXTFLD     30A  O  5 46
+     A*----------------------------------------------------------------
+     A          R CTL1                      SFLCTL(SFL1)
+     A                                      SFLSIZ(0011)
+     A                                      SFLPAG(0010)
+     A                                      CA17
+     A                                      CA18
+     A                                      OVERLAY
+     A  01                                  SFLDSP
+     A  02                                  SFLDSPCTL
+     A N02                                  SFLCLR
+     A N03                                  SFLEND(*MORE)
+     A            S1RCDNBR       4S 0H      SFLRCDNBR
+     A                                  4  4'Row ID '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 16'Date Field'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 28'Number Field    '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 46'Text Field                    '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  2  4'Position to:'
+     A            C1POSITION     4Y 0B  2 17EDTCDE(4)
+     A                                      COLOR(YLW)
+     A*----------------------------------------------------------------
+     A          R KEY1
+     A                                      OVERLAY
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 12'F17=Top'
+     A                                      COLOR(BLU)
+     A                                 23 22'F18=Bottom'
+     A                                      COLOR(BLU)
